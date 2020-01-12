@@ -1,0 +1,27 @@
+h1 {
+  @apply text-5xl;
+}
+
+h2 {
+  @apply text-4xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4 {
+  @apply text-xl;
+}
+
+h5 {
+  @apply text-lg font-bold tracking-wide;
+}
+
+.link {
+  @apply text-primary-500;
+
+  &:hover, &:focus {
+    @apply text-primary-600 cursor-pointer;
+  }
+}

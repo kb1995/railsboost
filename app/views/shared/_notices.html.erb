@@ -1,0 +1,8 @@
+<% flash.each do |msg_type, message| %>
+  <div class="alert <%= alert_class(msg_type) %>" data-controller="toggle" data-target="toggle.toggleable">
+    <div class="container">
+      <button class="close" data-action="click->toggle#toggle"><span>×</span></button>
+      <%= message %>
+    </div>
+  </div>
+<% end %>

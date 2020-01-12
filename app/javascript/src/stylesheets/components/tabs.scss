@@ -1,0 +1,7 @@
+.active-tab {
+  @apply bg-primary-600 rounded-t-sm rounded-b-none;
+
+  a {
+    @apply text-white;
+  }
+}

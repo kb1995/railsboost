@@ -1,0 +1,19 @@
+.alert {
+  @apply border rounded border-secondary-500 bg-secondary-200 text-secondary-600 p-4;
+
+  &.alert-success {
+    @apply border-success-600 bg-success-200 text-success-600;
+  }
+
+  &.alert-danger {
+    @apply border-danger-500 bg-danger-200 text-danger-500;
+  }
+
+  &.alert-warning {
+    @apply border-warning-500 bg-warning-200 text-warning-500;
+  }
+  
+  &.alert-info {
+    @apply border-primary-500 bg-primary-200 text-primary-500;
+  }
+}

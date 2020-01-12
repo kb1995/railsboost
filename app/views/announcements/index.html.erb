@@ -1,0 +1,25 @@
+<h1>What's New</h1>
+
+<div class="">
+  <div class="">
+    <% @announcements.each_with_index do |announcement, index| %>
+
+      <div class="flex justify-between items-center shadow-lg rounded-lg p-4 mb-8" id="<%= dom_id(announcement) %>">
+        <div class="">
+          <strong class="<%= announcement_class(announcement.announcement_type) %>"><%= announcement.announcement_type.titleize %>:</strong>
+          <strong><%= announcement.name %></strong>
+          <%= simple_format announcement.description %>
+        </div>
+        <div class="">
+          <%= link_to announcements_path(anchor: dom_id(announcement)) do %>
+            <strong><%= announcement.published_at.strftime("%b %d") %></strong>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
+    <% if @announcements.empty? %>
+      <div>Exciting stuff coming very soon!</div>
+    <% end %>
+  </div>
+</div>

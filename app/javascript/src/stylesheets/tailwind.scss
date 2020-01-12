@@ -1,0 +1,14 @@
+@tailwind base;
+
+@tailwind components;
+
+@import 'components/base';
+@import 'components/alert';
+@import 'components/typography';
+@import 'components/buttons';
+@import 'components/tabs';
+@import 'components/animation';
+@import 'components/cards';
+@import 'components/actiontext';
+
+@tailwind utilities; 

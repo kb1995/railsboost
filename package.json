@@ -1,0 +1,26 @@
+{
+  "name": "railsboost",
+  "private": true,
+  "dependencies": {
+    "@rails/actioncable": "^6.0.0",
+    "@rails/actiontext": "^6.0.2-1",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.2.2",
+    "expose-loader": "^0.7.5",
+    "jquery": "^3.4.1",
+    "local-time": "^2.1.0",
+    "popper.js": "^1.16.0",
+    "stimulus": "^1.1.1",
+    "tailwindcss": "^1.1.4",
+    "tippy.js": "^5.1.3",
+    "trix": "^1.0.0",
+    "turbolinks": "^5.2.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "tailwind-heropatterns": "^0.0.7",
+    "webpack-dev-server": "^3.10.1"
+  }
+}

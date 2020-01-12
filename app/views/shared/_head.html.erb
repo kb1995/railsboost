@@ -1,0 +1,15 @@
+<title><%= Rails.configuration.application_name %></title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_pack_tag 'stylesheet', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= favicon_link_tag asset_path('favicon.png') %>
+
+<%# Replace with your own font (don't forget to update your tailwind.config.js) %>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">

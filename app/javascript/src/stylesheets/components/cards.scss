@@ -1,0 +1,33 @@
+.card{
+	@apply max-w-sm rounded overflow-hidden shadow-lg;
+	&.card-horizontal{
+		.card-content{
+			@apply border-r border-b border-l border-gray-400 bg-white rounded-b p-4;
+		}
+	}
+
+	@screen lg {
+		&.card-horizontal {
+			@apply max-w-full flex;
+
+			.card-image{
+				@apply w-48;
+			}
+			.card-content{
+				@apply border-l-0 border-t border-gray-400 rounded-b-none rounded-r;
+			}
+		}
+	}
+
+	.card-image{
+		@apply block w-full;
+
+		>img{
+			@apply w-full;
+		}
+	}
+
+	.card-content{
+		@apply px-6 py-4;
+	}
+}

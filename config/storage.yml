@@ -1,0 +1,15 @@
+test:
+  service: Disk
+  root: <%= Rails.root.join("tmp/storage") %>
+
+local:
+  service: Disk
+  root: <%= Rails.root.join("storage") %>
+
+# Update your .env with the following S3 environment variables
+amazon:
+  service: S3
+  access_key_id: <%= Nenv.s3_access_key %>
+  secret_access_key: <%= Nenv.s3_secret_key %>
+  region: <%= Nenv.s3_region %>
+  bucket: <%= Nenv.s3_bucket_name %>

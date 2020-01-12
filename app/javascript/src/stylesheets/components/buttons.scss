@@ -1,0 +1,96 @@
+// base btn classes
+
+.btn {
+  @apply inline-flex font-bold text-center py-2 px-4 rounded no-underline items-center justify-between;
+  transition: ease 0.3s background, ease 0.3s transform, ease 0.2s color;
+
+  &:hover, &:focus {
+    @apply cursor-pointer;
+  }
+
+  &:disabled {
+    @apply opacity-50;
+    cursor: not-allowed !important;
+  }
+}
+
+.btn-small {
+  @apply py-1 text-sm;
+}
+
+.btn-large {
+  @apply text-lg px-6;
+}
+
+.btn-disabled{
+  @apply opacity-50;
+  cursor: not-allowed !important;
+}
+
+// brand specific
+
+.btn-primary {
+  @apply bg-primary-500 text-white;
+
+  &:hover, &:focus {
+    @apply bg-primary-600 text-white;
+  }
+}
+
+.btn-secondary {
+  @apply bg-secondary-500 text-white;
+
+  &:hover, &:focus {
+    @apply bg-secondary-600 text-white;
+  }
+}
+
+.btn-success {
+  @apply bg-success-500 text-white;
+
+  &:hover, &:focus {
+    @apply bg-success-600 text-white;
+  }
+
+  &.outline {
+    @apply bg-transparent border border-success-500 text-success-500 shadow-none;
+
+    &:hover, &:focus {
+      @apply bg-success-500 text-white;
+    }
+  }
+}
+
+.btn-warning {
+  @apply bg-warning-500 text-black;
+
+  &:hover, &:focus {
+    @apply bg-warning-600 text-black;
+  }
+}
+
+.btn-danger {
+  @apply bg-danger-500 text-white;
+
+  &:hover, &:focus {
+    @apply bg-danger-600 text-white;
+  }
+}
+
+// general 
+
+.btn-white {
+  @apply bg-white;
+
+  &:hover, &:focus {
+    @apply bg-gray-100;
+  }
+}
+
+.btn-black {
+  @apply bg-black text-white;
+
+  &:hover, &:focus {
+    @apply bg-gray-900 text-white;
+  }
+}
