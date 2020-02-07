@@ -1,5 +1,21 @@
 # frozen_string_literal: true
 
+# == Schema Information
+#
+# Table name: notifications
+#
+#  id              :bigint           not null, primary key
+#  action          :string
+#  notifiable_type :string
+#  read_at         :datetime
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  actor_id        :bigint
+#  notifiable_id   :bigint
+#  recipient_id    :bigint
+#
+
+
 class Notification < ApplicationRecord
   belongs_to :recipient, class_name: "User"
   belongs_to :actor, class_name: "User"
