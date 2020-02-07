@@ -49,7 +49,7 @@ Add Javascript to your HTML in a structured way using [StimulusJS](https://stimu
 
 1. Clone the repo
 2. **gem install bundle** && **bundle install**
-3. **npm install** && **yarn install**
+3. **yarn install**
 4. **gem install foreman**
 5. replace "railsboost_" in **config/database.yml** && "Railsboost" in **config/application.rb** with your new app name 
 6. **rails db:setup** & **rake db:migrate**
