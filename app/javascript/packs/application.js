@@ -21,4 +21,4 @@ $(document).on("turbolinks:load", () => {
 
 import "controllers"
 import "./stylesheet"
-import "../src/javascript/main"
+import "../src/javascript/index"

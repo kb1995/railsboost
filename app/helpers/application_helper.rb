@@ -10,17 +10,20 @@ module ApplicationHelper
     }.stringify_keys[flash_type.to_s] || flash_type.to_s
   end
 
-  def render_icon(name, options = {})
-    filename = "icons/#{name}.svg"
-
-    options[:class] ||= "text-black"
+  def render_svg(name, options = {})
+    options[:title] ||= name.underscore.humanize
+    options[:class] = options[:styles]
     options[:aria] = true
     options[:nocomment] = true
 
-    inline_svg_tag(filename, options)
+    inline_svg_tag("#{name}.svg", options)
   end
 
-  def boolean_icon(value, options = {})
-    value ? render_icon("check", options) : render_icon("x", options)
+  def render_icon(name, styles = "")
+    "<i class='#{styles}' data-feather='#{name}'></i>".html_safe
+  end
+
+  def boolean_icon(value, styles = "")
+    value ? render_icon("check", styles) : render_icon("x", styles)
   end
 end
