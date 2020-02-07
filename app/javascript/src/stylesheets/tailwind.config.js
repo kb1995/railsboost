@@ -22,6 +22,22 @@ module.exports = {
         "danger-500": colors.red[500],
         "danger-600": colors.red[600],
       },
+      spacing: {
+        '72': '18rem',
+        '84': '21rem',
+        '96': '24rem',
+        '112': '28rem',
+        '128': '32rem',
+        '148': '37rem',
+        '168': '42rem',
+        '192': '48rem',
+        '216': '54rem',
+        '244': '61rem',
+      }
+    },
+    container: {
+      center: true,
+      padding: "2rem",
     },
     fontFamily: {
       "sans": [

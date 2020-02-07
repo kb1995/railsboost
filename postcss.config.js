@@ -1,4 +1,4 @@
-module.exports = {
+let environment = {
   plugins: [
     require('postcss-import'),
     require('postcss-flexbugs-fixes'),
@@ -12,3 +12,20 @@ module.exports = {
     })
   ]
 }
+
+if (process.env.NODE_ENV === 'production') {
+  environment.plugins.push(
+    require('@fullhuman/postcss-purgecss')({
+    content: [
+      './app/**/*.html.erb',
+      './app/helpers/**/*.rb',
+      './app/frontend/**/*.js',
+      './app/frontend/**/*.rb',
+      './config/initializers/*.rb'
+    ],
+    defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+  }))
+}
+
+module.exports = environment
+

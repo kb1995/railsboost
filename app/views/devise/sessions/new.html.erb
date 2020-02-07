@@ -1,20 +1,30 @@
-<h2 class="text-xl mb-8 font-semibold">Log in</h2>
+<section class="flex h-screen">
+  <div class="w-full lg:w-1/2">
+    <div class="max-w-md mx-auto px-4">
+      <div class="mb-8 mt-4">
+        <h2 class="font-semibold">Welcome back</h2>
+        <p class="text-mute">Sign in into your account</p>
+      </div>
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :email,
+                      required: false,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" } %>
+          <%= f.input :password,
+                      required: false,
+                      input_html: { autocomplete: "current-password" } %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        <div class="form-actions">
+          <%= f.button :submit, "Log in" %>
+        </div>
+      <% end %>
+      <%= render "devise/shared/links" %>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+  <div class="lg:w-1/2 hidden lg:block bg-red-300">
+    <%= image_tag 'default/signin.png', class: "w-full h-full object-cover" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</section>
