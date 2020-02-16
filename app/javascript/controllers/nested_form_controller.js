@@ -1,4 +1,19 @@
-// This controller removes the need for using gems like cocoon
+// This stimulus controller removes the need for using gems like cocoon
+
+// ***
+// EXAMPLE
+// ***
+
+// ---
+// Inside your model, add associations and nested attributes
+// ---
+
+// has_many :tasks, dependent: :destroy
+// accepts_nested_attributes_for :tasks, reject_if: :all_blank, allow_destroy: true
+
+// ---
+// Inside your form
+// ---
 
 // <div data-controller="nested-form">
 //   <h3>Tasks</h3>
@@ -15,7 +30,9 @@
 //   </div>
 // </div>
 
-// ! Within the partial
+// ---
+// Inside the "task" partial
+// ---
 
 // <div class="nested-fields" data-new-record="<%= form.object.new_record? %>">
 //   <div class="form-group">
@@ -25,7 +42,9 @@
 //     <%= form.hidden_field :_destroy %>
 // </div>
 
-// ! In your controller, pass this in your controller
+// ---
+// In your controller, pass this in your strong params
+// ---
 
 // tasks_attributes: [:id, :name, :_destroy]
 
@@ -34,7 +53,6 @@ export default class extends Controller {
   static targets = ["links", "template"]
 
   connect() {
-    
   }
 
   add_association(event){
@@ -46,7 +64,7 @@ export default class extends Controller {
 
   remove_association(event){
     event.preventDefault()
-    
+
     let wrapper = event.target.closest(".nested-fields")
     if (wrapper.dataset.newRecord == "true"){
       wrapper.remove()
