@@ -15,6 +15,7 @@ Gems included from the start with Railsboost:
 - Authentication via [devise](https://github.com/plataformatec/devise)
 - Easily configurable admin dashboards uisng [administrate](https://github.com/thoughtbot/administrate)
 - Convenient wrapper for your ENV with [nenv](https://github.com/e2/nenv)
+- Use hashids for your models with [hashid-rails](https://github.com/jcypret/hashid-rails/)
 - Maintain good standards with [rubocop](https://github.com/rubocop-hq/rubocop) & [strong_migrations](https://github.com/ankane/strong_migrations#adding-a-column-with-a-default-value) & [rails-patterns](https://github.com/Selleo/pattern)
 - Inspect your emails via [letter_opener_web](https://github.com/fgrehm/letter_opener_web) 
 - Debug with [better_errors](https://github.com/BetterErrors/better_errors)
@@ -41,19 +42,23 @@ Add Javascript to your HTML in a structured way using [StimulusJS](https://stimu
 
 ## Other goodies
 
-- Active Storage using [Uppy](https://uppy.io/) and S3 (include your S3 environment variables in your <mark>.env</mark> file)
-- All [Feather icons](https://feathericons.com) are included in the project by default - use them easily with the <mark>render_icon</mark> helper
+- Active Storage using [Uppy](https://uppy.io/) and S3 (include your S3 environment variables in your `.env` file)
+- All [Feather icons](https://feathericons.com) are included in the project by default - use them easily with the `render_icon` helper
 - [Action Text](https://edgeguides.rubyonrails.org/action_text_overview.html) & Trix included by default
 
 ## Installation
 
-1. Clone the repo - <mark>git clone https://github.com/kb1995/railsboost.git your_app_name</mark> 
+1. Clone the repo - `git clone https://github.com/kb1995/railsboost.git your_app_name` 
 2. **gem install bundle** && **bundle install**
 3. **yarn install**
 4. **gem install foreman**
-5. replace "railsboost_" in <mark>config/database.yml</mark> && "Railsboost" in <mark>config/application.rb</mark> with your new app name 
+5. replace "railsboost_" in `config/database.yml` && "Railsboost" in `config/application.rb` with your new app name 
 6. **rails db:setup** & **rake db:migrate**
 7. run your server using **foreman s**
+
+
+You can use `.env.example` as a base for your `.env` file  
+
 
 ### Reset your .git
 
@@ -63,17 +68,5 @@ Add Javascript to your HTML in a structured way using [StimulusJS](https://stimu
 4. git commit -m 'First commit'
 5. push to your remote repo
 
-## Version 1.1
 
-Development on this project is ongoing. Some things that I have planned for version 1.1:
-
-- Tailwind pills components
-- Tailwind btn-outline components
-- Tailwind table components
-- Active navbar page helper
-- Improved styling for simple form
-- Data-confirm-modal with Tailwind/Stimulus
-- Improvements around active storage/direct upload
-- Image_processing gem configuration
-- Staging app configuration
-- Template landing page && more styling around default screens
+Happy coding 🚀

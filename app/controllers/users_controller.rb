@@ -20,6 +20,6 @@ class UsersController < ApplicationController
     end
 
     def validate_user
-      redirect_to root_path if params[:id].to_i != current_user.id
+      redirect_to root_path if params[:id] != current_user.hashid
     end
 end

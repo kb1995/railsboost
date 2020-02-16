@@ -49,10 +49,10 @@ gem "strong_migrations", "~> 0.5.1"
 gem "rails-patterns", "~> 0.6.0"
 gem "draper", "~> 3.1"
 gem "attr_extras", "~> 6.2"
-gem "hashid-rails", "~> 1.2", ">= 1.2.2"
 gem "gravatar_image_tag", "~> 1.2"
 gem "name_of_person", "~> 1.1"
 gem "possessive", "~> 1.0"
+gem 'hashid-rails', '~> 1.4'
 
 # good standards
 gem 'rubocop', '~> 0.78.0', require: false
