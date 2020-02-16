@@ -18,7 +18,7 @@
 SimpleForm.setup do |config|
 
   # Default class for buttons
-  config.button_class = 'btn btn-primary btn-small'
+  config.button_class = 'btn btn-primary'
 
   # Define the default class of the input wrapper of the boolean input.
   config.boolean_label_class = 'block'
@@ -45,13 +45,14 @@ SimpleForm.setup do |config|
   config.error_method = :to_sentence
 
   # add validation classes to `input_field`
+  # TODO style these
   config.input_field_error_class = 'is-invalid'
   config.input_field_valid_class = 'is-valid'
 
   # horizontal forms
   #
   # horizontal default_wrapper
-  config.wrappers :horizontal_form, tag: 'div', class: 'flex lg:items-center mb-3', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+  config.wrappers :horizontal_form, tag: 'div', class: 'flex flex-col lg:flex-row lg:items-center mb-3', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
     b.use :html5
     b.use :placeholder
     b.optional :maxlength
@@ -59,7 +60,7 @@ SimpleForm.setup do |config|
     b.optional :pattern
     b.optional :min_max
     b.optional :readonly
-    b.use :label, class: 'lg:w-1/4'
+    b.use :label, class: 'lg:w-1/4 mb-2 lg:mb-0'
     b.wrapper :grid_wrapper, tag: 'div', class: 'w-full flex flex-col' do |ba|
       ba.use :input, class: 'form-input', error_class: 'is-invalid', valid_class: 'is-valid'
       ba.use :full_error, wrap_with: { tag: 'div', class: 'inline-block text-red-700 mt-1 lg:ml-3' }
@@ -73,7 +74,7 @@ SimpleForm.setup do |config|
     b.optional :readonly
     b.use :label, class: 'lg:w-1/4'
 
-    b.wrapper :grid_wrapper, tag: 'div', class: 'flex items-center' do |ba|
+    b.wrapper :grid_wrapper, tag: 'div', class: 'flex items-start w-full' do |ba|
       ba.use :input, class: 'form-checkbox', error_class: 'is-invalid', valid_class: 'is-valid'
       ba.use :full_error, wrap_with: { tag: 'div', class: 'inline-block text-red-700 mt-1 lg:ml-3' }
       ba.use :hint, wrap_with: { tag: 'div', class: 'inline-block text-gray-700 lg:ml-3' }
@@ -95,19 +96,7 @@ SimpleForm.setup do |config|
     end
   end
 
-  # horizontal input for boolean
-  config.wrappers :horizontal_boolean_auth, tag: 'div', class: 'flex items-center mb-3', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
-    b.use :html5
-    b.optional :readonly
-
-    b.wrapper :grid_wrapper, tag: 'div', class: 'flex items-center cursor-pointer' do |ba|
-      ba.use :input, class: 'flex-grow cursor-pointer form-checkbox', error_class: 'is-invalid', valid_class: 'is-valid'
-      ba.use :label, class: 'inline-block cursor-pointer pl-3'
-      ba.use :full_error, wrap_with: { tag: 'div', class: 'inline-block text-red-700 lg:ml-3' }
-      ba.use :hint, wrap_with: { tag: 'div', class: 'inline-block text-gray-700 lg:ml-3' }
-    end
-  end
-
+  # TODO when you need radio buttons
   # horizontal input for radio buttons and check boxes
   config.wrappers :horizontal_collection, item_wrapper_class: 'form-check', tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
     b.use :html5
@@ -120,6 +109,7 @@ SimpleForm.setup do |config|
     end
   end
 
+  # TODO when you need radio buttons
   # horizontal input for inline radio buttons and check boxes
   config.wrappers :horizontal_collection_inline, item_wrapper_class: 'form-check form-check-inline', tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
     b.use :html5
@@ -132,6 +122,7 @@ SimpleForm.setup do |config|
     end
   end
 
+  # TODO is it needed now that we have uppy?
   # horizontal file input
   config.wrappers :horizontal_file, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
     b.use :html5
