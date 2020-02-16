@@ -12,15 +12,17 @@ module ApplicationHelper
 
   def render_svg(name, options = {})
     options[:title] ||= name.underscore.humanize
-    options[:class] = options[:styles]
+    options[:class] = options[:classes]
     options[:aria] = true
     options[:nocomment] = true
 
     inline_svg_tag("#{name}.svg", options)
   end
 
-  def render_icon(name, styles = "")
-    "<i class='#{styles}' data-feather='#{name}'></i>".html_safe
+  def render_icon(name, options={})
+    classes = options[:classes] || ""
+    target = options[:target] || ""
+    "<i class='#{classes}' data-target='#{target}' data-feather='#{name}'></i>".html_safe
   end
 
   def boolean_icon(value, styles = "")
