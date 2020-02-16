@@ -9,6 +9,7 @@
 <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 <%= stylesheet_pack_tag 'stylesheet', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+<%= tag.meta name: "direct-upload-url", content: rails_direct_uploads_path %>
 <%= favicon_link_tag asset_path('favicon.png') %>
 
 <%# Replace with your own font (don't forget to update your tailwind.config.js) %>

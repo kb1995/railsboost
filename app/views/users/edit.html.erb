@@ -1,0 +1,35 @@
+<div class="bg-gray-100">
+  <div class="container pb-10">
+    <h2 class="text-3xl font-semibold text-center pt-10 pb-3">Update your personal information</h2>
+    <div class="bg-white rounded-lg p-3 max-w-xl mx-auto shadow-md px-8 pt-6 pb-8 mb-4">
+      <%= simple_form_for(current_user, url: user_path(current_user), html: { method: :put }) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <%= f.input :email, required: true, autofocus: true %>
+          <%= f.input :first_name, autofocus: true %>
+          <%= f.input :last_name, autofocus: true %>
+
+          <div data-uppy="user[avatar]" class="mb-3">
+            <% if current_user.avatar.attached? %>
+              <%= image_tag current_user.avatar, width: 200, data: { behaviour: "uppy-preview"} %>
+            <% else %>
+              <img src="" alt="" data-behaviour="uppy-preview" />
+            <% end %>
+            <%= link_to 'Upload Image', "#", data: {behaviour: "uppy-trigger"}, class: "btn btn-secondary btn-small my-2" %>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <div>
+            <%= f.button :submit, "Update your account", class: "btn btn-primary btn-large mb-3" %>
+          </div>
+          <%= link_to 'Change password', edit_user_registration_path, class: "text-sm hover:underline" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="text-center">
+      <%= link_to "Delete your account", registration_path(current_user), data: { confirm: "All of your data will be deleted. This action is irreversible. Are you sure?" }, method: :delete, class: "btn btn-danger" %>
+    </div>
+  </div>
+</div>

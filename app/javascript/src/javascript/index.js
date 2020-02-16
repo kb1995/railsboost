@@ -1,2 +1,2 @@
-import "./direct_uploads"
+import "./uppy.js"
 import './feather.js'

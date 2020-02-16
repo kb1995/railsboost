@@ -29,7 +29,7 @@
               <div data-action="click->dropdown#toggle click@window->dropdown#hide" role="button" class="inline-block select-none">
                 <span class="appearance-none flex items-center inline-block text-gray-700">
                   <% if current_user.avatar.attached? %>
-                    <img src="<%= url_for(current_user.avatar) %>" style="height: 20px; width: 20px;" class="rounded object-cover">
+                    <%= image_tag current_user.avatar, style: "height: 20px; width: 20px;", class: "rounded object-cover" %>
                   <% elsif current_user %>
                     <%= image_tag gravatar_image_url(current_user.email, size: 40), height: 20, width: 20, class: "rounded" %>
                   <% end %>
@@ -41,7 +41,7 @@
                     <% if current_user.admin? %>
                       <%= link_to "Admin Area", admin_root_path, class: "no-underline block px-8 py-3 text-gray-900 bg-white hover:bg-gray-300 whitespace-no-wrap" %>
                     <% end %>
-                    <%= link_to "Settings", edit_user_registration_path, class: "no-underline block px-8 py-3 text-gray-900 bg-white hover:bg-gray-300 whitespace-no-wrap" %>
+                    <%= link_to "Settings", edit_user_path(current_user), class: "no-underline block px-8 py-3 text-gray-900 bg-white hover:bg-gray-300 whitespace-no-wrap" %>
                     <div class="dropdown-divider"></div>
                     <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "no-underline block px-8 py-3 text-gray-900 bg-white hover:bg-gray-300 whitespace-no-wrap" %>
                 </div>
