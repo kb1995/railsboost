@@ -40,7 +40,7 @@ gem "devise_masquerade", "~> 1.2"
 gem "omniauth-facebook", "~> 5.0"
 gem "omniauth-github", "~> 1.3"
 gem "omniauth-twitter", "~> 1.4"
-gem 'administrate', '~> 0.12.0'
+gem 'administrate', '~> 0.13.0'
 
 # usefuls
 gem "inline_svg", "~> 1.6"
