@@ -69,7 +69,7 @@ end
 
 group :development do
   gem 'annotate', '~> 3.0', '>= 3.0.3'
-  gem "better_errors", "~> 2.5", ">= 2.5.1"
+  gem "better_errors", "~> 2.8"
   gem "binding_of_caller"
   # Access an interactive console on exception pages or by calling "console" anywhere in the code.
   gem "web-console", ">= 3.3.0"
