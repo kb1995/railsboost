@@ -16,7 +16,7 @@ gem "mini_magick", "~> 4.9", ">= 4.9.2"
 gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 
 # queues
-gem "sidekiq", "~> 6.0", ">= 6.0.3"
+gem "sidekiq", "~> 6.2"
 gem 'whenever', '~> 1.0', require: false
 
 # SEO
