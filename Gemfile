@@ -36,7 +36,7 @@ gem "active_model_serializers", "~> 0.10.0"
 
 # auth
 gem "devise", "~> 4.7", ">= 4.7.0"
-gem "devise_masquerade", "~> 1.2"
+gem "devise_masquerade", "~> 1.3"
 gem "omniauth-facebook", "~> 5.0"
 gem "omniauth-github", "~> 1.3"
 gem "omniauth-twitter", "~> 1.4"
