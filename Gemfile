@@ -43,7 +43,7 @@ gem "omniauth-twitter", "~> 1.4"
 gem 'administrate', '~> 0.12.0'
 
 # usefuls
-gem "inline_svg", "~> 1.6"
+gem "inline_svg", "~> 1.7"
 gem "nenv", "~> 0.3.0"
 gem "strong_migrations", "~> 0.5.1"
 gem "rails-patterns", "~> 0.6.0"
